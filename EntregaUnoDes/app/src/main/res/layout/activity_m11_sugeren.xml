@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:textAlignment="center"
+        android:text="Sugerencia de Comida"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/textView3"
+        android:layout_weight="0.40" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp">
+
+        <TextView
+            android:text="Calorías consumidas"
+            android:layout_width="143dp"
+            android:layout_height="42dp"
+            android:id="@+id/textView17" />
+
+        <TextView
+            android:text="Cantidad"
+            android:layout_width="185dp"
+            android:layout_height="43dp"
+            android:id="@+id/textView15"
+            android:layout_weight="0.05"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <TextView
+            android:text="Cantidad Restante"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:id="@+id/textView12"
+            android:layout_weight="0.07"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <TextView
+            android:text="Cantidad"
+            android:layout_width="189dp"
+            android:layout_height="41dp"
+            android:id="@+id/textView16"
+            android:layout_weight="0.09"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+    </GridLayout>
+
+    <TextView
+        android:text="Sugerencia de Comida:"
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView18"
+        android:layout_weight="0.30" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="241dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Comida Uno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewlol"
+                android:layout_weight="0.30" />
+            <TextView
+                android:text="Cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewcantidad"
+                android:layout_weight="0.30" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_input_add"
+                android:id="@+id/imageButton3" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Comida Dos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewdos"
+                android:layout_weight="0.30" />
+            <TextView
+                android:text="Cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewcantidaddos"
+                android:layout_weight="0.30" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_input_add"
+                android:id="@+id/imageButton4" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Comida Tres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewtres"
+                android:layout_weight="0.30" />
+            <TextView
+                android:text="Cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewcantidatres"
+                android:layout_weight="0.30" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_input_add"
+                android:id="@+id/imageButton5" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Comida Cuatro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewcuatro"
+                android:layout_weight="0.30" />
+            <TextView
+                android:text="Cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewcantidadcuatro"
+                android:layout_weight="0.30" />
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_input_add"
+                android:id="@+id/imageButton6" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        android:id="@+id/imageButton7"
+        android:layout_weight="0.15" />
+
+
+</LinearLayout>

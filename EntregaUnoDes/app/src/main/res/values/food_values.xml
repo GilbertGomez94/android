@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arreglo_comida">
+        <item>Desayuno</item>
+        <item>Almuerzo</item>
+        <item>Cena</item>
+        <item>Cualquier Momento</item>
+        <item>Tentepie Desayuno</item>
+        <item>Merienda</item>
+        <item>Tentepie Cena</item>
+    </string-array>
+</resources>
