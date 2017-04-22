@@ -23,7 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".M11SugerenActivity"></activity>
+        <activity android:name=".M11SugerenActivity" />
+        <activity android:name=".M11AddAlimentActivity" />
+        <activity android:name=".M11foodActivity" />
+        <activity android:name=".M11FoodActivity"></activity>
     </application>
 
 </manifest>
