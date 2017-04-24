@@ -82,6 +82,8 @@ public class M11HistorialActivity extends AppCompatActivity  {
             Entry c2e4 = new Entry(3f, 105000f);
             calConsumidas.add(c2e4);
 
+
+
             // datos de las calorias consumidas - quemadas
             Entry c3e1 = new Entry(0f, 30000f);
             calDiferencial.add(c3e1);
