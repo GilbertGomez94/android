@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EntregaUnoDes</string>
+    <string name="btn_irComida">Comida</string>
+    <string name="btn_historial">Historial</string>
+    <string name="btn_sugerencia">Sugerencia</string>
+    <string name="cb_consumidas">Consumidas</string>
+    <string name="cb_quemadas">Quemadas</string>
+
 </resources>

@@ -21,16 +21,16 @@
         android:id="@+id/textView2" />
 
     <Button
-        android:text="5000"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:minHeight="100dp"
-        android:minWidth="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/m11_circle"
         android:clickable="false"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:minHeight="100dp"
+        android:minWidth="100dp"
+        android:text="5000" />
 
     <ImageButton
         android:layout_width="wrap_content"
