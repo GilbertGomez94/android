@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">EntregaUnoDes</string>
-    <string name="btn_irComida">Comida</string>
-    <string name="btn_historial">Historial</string>
-    <string name="btn_sugerencia">Sugerencia</string>
+    <string name="btn_irComida">Cargar comida</string>
+    <string name="btn_historial">Seguimiento de calorias</string>
+    <string name="btn_sugerencia">Sugerencias</string>
+    <string name="btn_alimento">Alimentos almacenados</string>
+    <string name="btn_addAlimento">Registar alimento</string>
     <string name="cb_consumidas">Consumidas</string>
     <string name="cb_quemadas">Quemadas</string>
+    <string name="btn_dia">D</string>
+    <string name="btn_semana">S</string>
+    <string name="btn_mes">M</string>
+    <string name="btn_ano">A</string>
 
 </resources>

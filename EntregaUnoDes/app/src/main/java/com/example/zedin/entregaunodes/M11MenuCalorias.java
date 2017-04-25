@@ -26,4 +26,14 @@ public class M11MenuCalorias extends AppCompatActivity {
         Intent intent = new Intent(this, M11SugerenActivity.class);
         startActivity(intent);
     }
+
+    public void irAgregarAlimento(View view){
+        Intent intent = new Intent(this, M11AddAlimentActivity.class);
+        startActivity(intent);
+    }
+
+    public void irAlimento(View view){
+        Intent intent = new Intent(this, M11FoodActivity.class);
+        startActivity(intent);
+    }
 }

@@ -17,14 +17,14 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/cb_quemadas"
-        android:text="D" />
+        android:text="@string/btn_dia" />
 
     <Button
         android:id="@+id/btn_semana"
         style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="S"
+        android:text="@string/btn_semana"
         android:layout_below="@+id/btn_dia"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -37,7 +37,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/btn_semana"
-        android:text="M" />
+        android:text="@string/btn_mes" />
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
@@ -83,13 +83,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="0dp"
-        android:text="A"
+        android:text="@string/btn_ano"
         android:layout_below="@+id/btn_mes"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imgBtn_compartir"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
