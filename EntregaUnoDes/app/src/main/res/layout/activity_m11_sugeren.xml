@@ -7,7 +7,7 @@
 
     <TextView
         android:textAlignment="center"
-        android:text="Sugerencia de Comida"
+        android:text="Sugerencia de Comida "
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:id="@+id/textView3"
