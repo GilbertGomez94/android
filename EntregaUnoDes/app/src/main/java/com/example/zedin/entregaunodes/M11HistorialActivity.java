@@ -55,9 +55,12 @@ public class M11HistorialActivity extends AppCompatActivity  {
 
         try {
 
+
             lineChart = (LineChart) findViewById(R.id.chart);
             Utils.init(getResources());
+
             List<Entry> calQuemadas = new ArrayList<Entry>();
+            
             List<Entry> calConsumidas = new ArrayList<Entry>();
             List<Entry> calDiferencial = new ArrayList<Entry>();
 
