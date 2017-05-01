@@ -19,17 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".M11SugerenciaActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".M11SugerenActivity" />
-        <activity android:name=".M11AddAlimentActivity" />
-        <activity android:name=".M11foodActivity" />
-        <activity android:name=".M11FoodActivity"></activity>
 
         <activity android:name=".M11HistorialActivity"></activity>
 
