@@ -79,11 +79,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewcantidad"
                 android:layout_weight="0.30" />
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/imageButton3" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -101,11 +96,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewcantidaddos"
                 android:layout_weight="0.30" />
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/imageButton4" />
         </TableRow>
 
         <TableRow
@@ -124,11 +114,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewcantidatres"
                 android:layout_weight="0.30" />
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/imageButton5" />
         </TableRow>
 
         <TableRow
@@ -147,11 +132,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewcantidadcuatro"
                 android:layout_weight="0.30" />
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_input_add"
-                android:id="@+id/imageButton6" />
         </TableRow>
     </TableLayout>
 
