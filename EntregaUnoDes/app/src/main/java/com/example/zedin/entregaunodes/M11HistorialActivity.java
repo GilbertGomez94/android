@@ -43,9 +43,13 @@ import android.widget.EditText;
 public class M11HistorialActivity extends AppCompatActivity  {
 
     private static final String TAG = M11HistorialActivity.class.getSimpleName();
+    // variable del grafico
     private LineChart lineChart;
+    // setcomp1 contendra el conjunto de datos de la calorias quemadas
     private LineDataSet setComp1;
+    // setcomp2 contendra el conjunto de datos de la calorias consumidas
     private LineDataSet setComp2;
+    // setcomp3 contendra el conjunto de datos de la diferencia de las calorias quemadas y consumidas
     private LineDataSet setComp3;
 
     @Override
@@ -55,8 +59,12 @@ public class M11HistorialActivity extends AppCompatActivity  {
 
         try {
 
+            // obtengo el grafico del archivo xml
             lineChart = (LineChart) findViewById(R.id.chart);
+            // la documentacion dice que hay que poner esto.. xd
             Utils.init(getResources());
+            // declaro las variables donde se guardaran los datos de entrada
+            // es decir la cantidad de calorias.
             List<Entry> calQuemadas = new ArrayList<Entry>();
             List<Entry> calConsumidas = new ArrayList<Entry>();
             List<Entry> calDiferencial = new ArrayList<Entry>();
@@ -94,29 +102,39 @@ public class M11HistorialActivity extends AppCompatActivity  {
             Entry c3e4 = new Entry(3f, -35000f);
             calDiferencial.add(c3e4);
 
-            // creo el dataset de caloria quemadas
+            // creo el dataset de caloria quemadas y vinculo una etiqueta
+            // al conjunto de datos ademas asignarle color y otra propiedad
             setComp1 = new LineDataSet(calQuemadas, "Quemadas");
             setComp1.setColor(Color.BLUE);
             setComp1.setAxisDependency(AxisDependency.LEFT);
-            // creo el dataset de caloria consumidas
+            // creo el dataset de caloria consumidas y vinculo una etiqueta
+            // al conjunto de datos ademas asignarle color y otra propiedad
             setComp2 = new LineDataSet(calConsumidas, "Consumidas");
             setComp2.setColor(Color.YELLOW);
             setComp2.setAxisDependency(AxisDependency.LEFT);
-            // creo el dataset de caloria diferencial
+            // creo el dataset de caloria diferencial y vinculo una etiqueta
+            // al conjunto de datos ademas asignarle color y otra propiedad
             setComp3 = new LineDataSet(calDiferencial, "Diferencial");
             setComp3.setColor(Color.GREEN);
             setComp3.setAxisDependency(AxisDependency.LEFT);
 
+            // los LineDataSets anteriores(setComp1, setComp2 y setComp3)
+            // los introduzco en una sola estructura de datos
             List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
             dataSets.add(setComp1);
             dataSets.add(setComp2);
             dataSets.add(setComp3);
+            // creo el objeto LineData que es lo que se le pasa a la vista para que
+            // se visualice la grafica
             LineData data = new LineData(dataSets);
+            // seteo el grafico en la vista
             lineChart.setData(data);
+            // esto son propiedades de la grafica
             YAxis yAxis = lineChart.getAxisLeft();
             XAxis xAxis = lineChart.getXAxis();
             xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
             yAxis.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART);
+            // esto refresca e inicializa la grafica
             lineChart.invalidate(); // refresh
 
         }
@@ -127,47 +145,117 @@ public class M11HistorialActivity extends AppCompatActivity  {
 
     }
 
+    /*
+    funcion que muestra o elimina la linea que indica las calorias
+    consumidas de la grafica. El metodo es llamado con la propiedad
+    onClick en el archivo xml
+    */
     public void activarDesactivarConsumidas(View view) {
+        // obtengo el checkbox que indica si desea ver o no
+        // la linea de calorias consumidas
         CheckBox cbConsumidas = (CheckBox) findViewById(R.id.cb_consumidas);
+        // pregunto si el check no esta seleccionado
         if (!cbConsumidas.isChecked()) {
+            // obtengo la data del grafico
             LineData lineData = lineChart.getData();
             //ILineDataSet set = lineData.getDataSetByIndex(0);
+
+            // obtengo los datos pertenecientes a la linea de consumidas
             ILineDataSet consumidas = lineData.getDataSetByLabel("Consumidas",false);
+            // remuevo los datos
             lineData.removeDataSet(consumidas);
+            // se actualiza tanto el grafico como la variable que contiene los datos
             lineData.notifyDataChanged();
             lineChart.notifyDataSetChanged();
+            // refresco el grafico para que detecte los cambios
             lineChart.invalidate();
         }
-
+        // si el check esta seleccionado
         else {
+            // obtengo los datos de la grafica
             LineData lineData = lineChart.getData();
-
+            // agrego los datos pertenecientes a calorias consumidas
             lineData.addDataSet(setComp2);
+            // notifico los cambios
             lineData.notifyDataChanged();
             lineChart.notifyDataSetChanged();
+            // refresco el grafico para que agarre los cambios
             lineChart.invalidate();
         }
     }
 
+    /*
+    funcion que muestra o elimina la linea que indica las calorias
+    quemadas de la grafica. El metodo es llamado con la propiedad
+    onClick en el archivo xml
+    */
     public void activarDesactivarQuemadas(View view) {
+        // obtengo el checkbox que indica si desea ver o no
+        // la linea de calorias quemadas
         CheckBox cbQuemadas = (CheckBox) findViewById(R.id.cb_quemadas);
+        // pregunto si el check no esta seleccionado
         if (!cbQuemadas.isChecked()){
+            // obtengo la data del grafico
             LineData lineData = lineChart.getData();
             //ILineDataSet set = lineData.getDataSetByIndex(0);
-            ILineDataSet quemadas = lineData.getDataSetByLabel("Quemadas",false);
-            lineData.removeDataSet(quemadas);
-            lineData.notifyDataChanged();
-            lineChart.notifyDataSetChanged();
-            lineChart.invalidate();
-        }
-        else {
-            LineData lineData = lineChart.getData();
 
-            lineData.addDataSet(setComp1);
+            // obtengo los datos pertenecientes a la linea de quemadas
+            ILineDataSet quemadas = lineData.getDataSetByLabel("Quemadas",false);
+            // remuevo los datos
+            lineData.removeDataSet(quemadas);
+             // se actualiza tanto el grafico como la variable que contiene los datos
             lineData.notifyDataChanged();
             lineChart.notifyDataSetChanged();
+            // refresco el grafico para que detecte los cambios
             lineChart.invalidate();
         }
+        // si el check esta seleccionado
+        else {
+            // obtengo los datos de la grafica
+            LineData lineData = lineChart.getData();
+            // agrego los datos pertenecientes a calorias quemadas
+            lineData.addDataSet(setComp1);
+            // notifico los cambios
+            lineData.notifyDataChanged();
+            lineChart.notifyDataSetChanged();
+             // refresco el grafico para que agarre los cambios
+            lineChart.invalidate();
+        }
+    }
+
+    /*
+    esta funcion ya no va.
+    igual que su correspodiente boton del xml
+    */
+    public void verGraficaAno(View view){
+        lineChart.clear();
+    }
+
+    /*
+    funcion que refrescara la grafica para poder ver los
+    ultimos 12 meses de calorias consumidas, quemadas y su diferencia.
+    OJO FUNCION NO COMPLETADA. SOLO BORRA LOS DATOS POR AHORA
+    */
+    public void verGraficoMes(View view){
+        lineChart.clear();
+    }
+
+    /*
+    funcion que refrescara la grafica para poder ver las
+    ultimas 4 semanas de calorias consumidas, quemadas y su diferencia.
+    OJO FUNCION NO COMPLETADA. SOLO BORRA LOS DATOS POR AHORA
+    */
+    public void verGraficoSemana(View view){
+        lineChart.clear();
+    }
+
+     /*
+    funcion que refrescara la grafica para poder ver los
+    ultimos 7 dias de calorias consumidas, quemadas y su diferencia.
+    OJO FUNCION NO COMPLETADA. SOLO BORRA LOS DATOS POR AHORA
+    */
+    public void verGraficoDia(View view){
+        lineChart.clear();
     }
 
 

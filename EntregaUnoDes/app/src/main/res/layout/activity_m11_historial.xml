@@ -17,7 +17,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/cb_quemadas"
-        android:text="@string/btn_dia" />
+        android:text="@string/btn_dia"
+        android:onClick="verGraficoDia"/>
 
     <Button
         android:id="@+id/btn_semana"
@@ -27,7 +28,8 @@
         android:text="@string/btn_semana"
         android:layout_below="@+id/btn_dia"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="verGraficoSemana"/>
 
     <Button
         android:id="@+id/btn_mes"
@@ -37,7 +39,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/btn_semana"
-        android:text="@string/btn_mes" />
+        android:text="@string/btn_mes"
+        android:onClick="verGraficaMes"/>
 
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/chart"
@@ -86,7 +89,8 @@
         android:text="@string/btn_ano"
         android:layout_below="@+id/btn_mes"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="verGraficaAno"/>
 
     <ImageButton
         android:id="@+id/imgBtn_compartir"
